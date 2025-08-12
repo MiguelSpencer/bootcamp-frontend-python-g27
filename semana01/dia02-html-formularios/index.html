@@ -87,10 +87,178 @@
            <input type="hidden" value="Este es un input oculto">
 
            <input type="submit" value="Guardar"/>
-           <reset type="reset" value="Limpiar" />
-           
-           
+           <input type="reset" value="Limpiar" />
         </form>
+
+        <form>
+            <h2>Input tipo fecha</h2>
+
+            <label>
+                Input (Fecha y hora)
+                <input type="datetime-local" />
+            </label>
+
+            <label>
+                Input (Fecha)
+                <input type="date" />
+            </label>
+
+            <label>
+                Input (Fecha, semana)
+                <input type="week" />
+            </label>
+
+            <label>
+                Input (Fecha, mes)
+                <input type="month" />
+            </label>
+
+            <input type="submit" value="Guardar"/>
+        </form>
+
+        <form>
+            <h2>Textarea</h2>
+
+            <label>
+            <textarea placeholder="Escriba una descripcion sobre ti" rows="5" color="4" ></textarea>
+            </label>
+
+            <label>
+            <textarea placeholder="Escriba una descripcion sobre ti" rows="5" color="4" disabled></textarea>
+            </label>
+
+            <input type="submit" value="Guardar"/>
+        </form>
+
+        <form>
+            <h2>Checkbox</h2>
+
+            <h3>Lenguaje de mi preferencia</h3>
+
+            <label>
+                <input type="checkbox" value="en" />
+                Ingles
+            </label>
+            <label>
+                <input type="checkbox" value="es" />
+                Español
+            </label>
+            <label>
+                <input type="checkbox" value="do" />
+                Dothraki
+            </label>
+
+            <input type="submit" value="Guardar"/>
+        </form>
+
+        <form>
+            <h2>Radio buttons</h2>
+
+             <h3>Seleciona el lenguaje de preferencia</h3>
+
+            <label>
+                <input type="radio" name="Lenguaje" value="en" />
+                Ingles
+            </label>
+            <label>
+                <input type="radio" name="Lenguaje" value="es" />
+                Español
+            </label>
+            <label>
+                <input type="checkbox" name="Lenguaje" value="do" />
+                Dothraki
+            </label>
+
+            <h3>Selecione su comida favorita</h3>
+
+            <label>
+                <input type="radio" name="food" value="en" />
+                Ceviche
+            </label>
+            <label>
+                <input type="radio" name="food" value="es" />
+                Causa
+            </label>
+            <label>
+                <input type="checkbox" name="food" value="do" />
+                Arroz con pato
+            </label>
+ 
+            <input type="submit" value="Guardar"/>
+        </form>
+
+        <form>
+            <h2>Select</h2>
+
+            <label>
+                comida favorita 
+
+                <select>
+                    <option value="">Seleccion comida favaorita...</option>
+                    <option value="fr">francesa</option>
+                    <option value="it">italiana</option>
+                    <option value="jp">japonesa</option>
+                    <option value="pe">peruana</option>
+                    <option value="th">thailandesa</option>
+                </select>
+            </label>
+
+            <label>
+                comida favorita (multiple Seleccion) Presiona Ctrl o Cmd para seleccionar multiples opciones
+
+                <select multiple>
+                    <option value="">Seleccion comida favaorita...</option>
+                    <option value="fr">francesa</option>
+                    <option value="it">italiana</option>
+                    <option value="jp">japonesa</option>
+                    <option value="pe">peruana</option>
+                    <option value="th">thailandesa</option>
+                </select>
+            </label>
+
+            <input type="submit" value="Guardar"/>
+        </form>
+
+        <form>
+            <h2>validaciones</h2>
+
+            <label>
+                Nombre (obligatorio)
+                <input type="text" name="nombre" required minlength="3" maxlength="15" />
+            </label>
+
+            <label>
+                Email (obligatorio)
+                <input type="mail" name="correo" required/>
+            </label>
+
+            <label>
+                Edad (obligatorio)
+                <input type="number" name="edad" required min="1" max="99" />
+            </label>
+
+            <label>
+                Telefono (opcional)
+                <input type="tel" name="telefono" placeholder="+51 999 999 999" required pattern="\+[0-9]{2} [0-9]{3} [0-9]{3} [0-9]{3}"/>
+            </label>
+
+            <label>
+                Comida(obligatorio)
+                <select name="comida" required>
+                    <option value="">Seleccion comida favaorita...</option>
+                    <option value="fr">francesa</option>
+                    <option value="it">italiana</option>
+                    <option value="jp">japonesa</option>
+                    <option value="pe">peruana</option>
+                    <option value="th">thailandesa</option>
+                </select>
+
+            <input type="submit" value="Guardar"/>
+
+        <form>
+
+        </form>
+           
   </main>   
 </body>
 </html>
