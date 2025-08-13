@@ -29,7 +29,7 @@ main {
     
 
     width: 650px;
-    height: 400px;
+    min-height: 400px;
 
     display: flex;
 
@@ -40,7 +40,7 @@ main {
 
 .photo {
     background-color: orange;
-    width: 300px;
+    width: 350px;
 
     background-image: url(./images/image-product-desktop.jpg);
     background-size: cover;
@@ -51,6 +51,11 @@ main {
     background-color: hsl(0, 0%, 100%);/* white */
 
     width: 350px; 
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px; /* espacio entre los elementos hijos */
 }
 
 .content h2 {
@@ -60,9 +65,6 @@ main {
     font-weight: 500; /* peso de laletra */
     color: hsl(228, 12%, 48%);
     letter-spacing: 7px; /* espacio entre letras */
-    
-
-
 }
 
 .content h1 {
@@ -77,4 +79,43 @@ main {
     font-weight: 500;
     line-height: 1.5;
     color:hsl(228, 12%, 48%)
+}
+
+.content div {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.content span{
+    font-family: "Fraunces", serif;
+    font-size: 42px;
+    color: hsl(158, 36%, 37%)
+}
+
+.content s {
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+.content button {
+   border: 0;
+
+   font-family: inherit; /* tome los estilos de la fuente del padre */
+   font-weight: 700;
+   background-color: hsl(158, 36%, 37%);
+   color: hsl(0, 0%, 100%);
+   padding: 14px;
+   width: 100%;
+
+   display: flex;
+   justify-content: center;
+    align-items: center;
+    gap: 7px;
+
+    border-radius: 7px;
+    cursor: pointer;
+
+
 }
