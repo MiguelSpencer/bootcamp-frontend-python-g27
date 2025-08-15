@@ -1,0 +1,22 @@
+/*
+font-family: "Karla", sans-serif;
+*/
+
+body {
+    /* hsl (color, saturacion, brillo)*/
+  background-color: hsl(148, 38%, 91%); 
+
+  font-family: "Karla", sans-serif;
+
+  display: flex;  
+    justify-content: center; /* alineamiento horizontal*/
+    align-items: center; /*alineamiento vertical*/  
+    height: 100vh; /*100% de la ventana del navegador*/
+}
+
+.contact form {
+  background-color: hsl(0, 0%, 100%);
+
+  width: 400px; ;
+  
+}
