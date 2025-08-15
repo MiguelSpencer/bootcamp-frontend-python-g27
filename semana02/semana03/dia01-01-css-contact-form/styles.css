@@ -2,12 +2,6 @@ h1 {
     margin: 0;
 }
 
-
-
-/*
-font-family: "Karla", sans-serif;
-*/
-
 body {
     /* hsl (color, saturacion, brillo)*/
   background-color: hsl(148, 38%, 91%); 
@@ -16,9 +10,10 @@ body {
   font-size: 16px;
 
   display: flex;  
-    justify-content: center; /* alineamiento horizontal*/
-    align-items: center; /*alineamiento vertical*/  
-    height: 100vh; /*100% de la ventana del navegador*/
+  justify-content: center; /* alineamiento horizontal*/
+  align-items: center; /*alineamiento vertical*/  
+
+  height: 100vh; /*100% de la ventana del navegador*/
 }
 
 .contact form {
@@ -27,9 +22,11 @@ body {
   width: 400px; 
 
   padding: 32px;
+
+  border-radius: 16px;
 }
 
-  border-radius: 16px;a
+  
 
 .contact-form h1 {
     color: hsl(187, 24%, 22%);
@@ -38,7 +35,7 @@ body {
 }
 
 label {
-   border: 1px solid red;
+   /*border: 1px solid red; */
     display: block;
     margin-bottom: 16px;
 
@@ -55,15 +52,31 @@ label textarea {
   border-radius: 8px;
   border: 1px solid hslhsl(186, 15%, 59%)
   padding: 16px;
-
-  box -sizing: border-box; /* para que el padding no afecte al width*/
+  box-sizing: border-box; /* para que el padding no afecte al width*/
 }
 
 .row {
     display: grid;
     border: 1px solid blue;
     gap: 16px;
+ 
+}
 
-    
+input[type="submit"] {
+    width:100 ;
+    border: none;
+    background-color:hsl(169, 82%, 27%) ;
+    color: hsl(0, 0%, 100%);
+    padding: 16px;
+    border-radius: 8px;
+
+    font-weight: 700;
+    letter-spacing:1px ;
+
+    font-family: inherit; 
+    font-weight: 700;
+    letter-spacing: 1px;
+   
+  margin-right: 8px;
 }
 
