@@ -20,42 +20,42 @@
       <div class="row">
         <label>
           First Name <span class="required">*</span>
-          <input type="text" name="first-name" />
+          <input type="text" name="first_name" />
         </label>
 
         <label>
           Last Name <span class="required">*</span>
-          <input type="text" name="last-name" />
+          <input type="text" name="last_name" />
         </label>
       </div>
 
        <label>
         Email Address <span class="required">*</span>
-        <input type="email" name="email" />
+        <input type="email" name="email_address" required/>
        </label>
 
       <div>
          Query Type <span class="required">*</span>    
 
-        <div class="row">
+        <div class="row" query-type>
           <label>
-            General Enquiry <span class="required">*</span>
-            <input type="radio" name="query-type">
+            <input type="radio" name="query-type"required />
+            General Enquiry
           </label>
           <label>
-            Support Request <span class="required">*</span>
-            <input type="radio" name="query-type">
+            <input type="radio" name="query-type"required />
+            Suport Request
           </label>
         </div>
       </div>
 
       <label>
         Message <span class="required">*</span>
-        <textarea name="message" rows="5" required></textarea>
+        <textarea type="text" name="message" required></textarea>
       </label>
 
-      <label>
-        <input type="checkbox" name="consent" required />
+      <label class="flex">
+        <input type="checkbox" />
         I consent to being contacted by the team
       </label>
 

@@ -44,39 +44,67 @@ label {
 label input[type="text"],
 label input[type="email"],
 label textarea {
-  display: flex;
-  margin-bottom: 16px;
-  margin-top:8px;
+    display: flex;
+    margin-bottom: 16px;
+    margin-top: 8px;
 
-  width: 100%;
-  border-radius: 8px;
-  border: 1px solid hslhsl(186, 15%, 59%)
-  padding: 16px;
-  box-sizing: border-box; /* para que el padding no afecte al width*/
+    width: 100%;
+    padding: 16px;
+    border: 1px solid hsl(186, 15%, 59%);
+    border-radius: 8px;
+    
+    box-sizing: border-box;
+
+  
 }
 
 .row {
     display: grid;
-    border: 1px solid blue;
+    grid-template-columns: 1fr 1fr; /* dos columnas de igual tamaño */
     gap: 16px;
  
 }
 
 input[type="submit"] {
-    width:100 ;
+    width:100%;
+    padding:16px;
+
     border: none;
-    background-color:hsl(169, 82%, 27%) ;
-    color: hsl(0, 0%, 100%);
-    padding: 16px;
     border-radius: 8px;
 
-    font-weight: 700;
-    letter-spacing:1px ;
+    background-color: hsl(169, 82%, 27%);
+    color: hsl(0, 0%, 100%);
 
-    font-family: inherit; 
+    font-family: inherit;
     font-weight: 700;
     letter-spacing: 1px;
-   
-  margin-right: 8px;
+
 }
+
+.required {
+    color: hsl(169, 82%, 27%)
+    
+}
+
+.query-type label {
+    border: 1px solid hsl(186, 15%, 59%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap:4px ;
+    padding: 12px;
+    margin-top: 8px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.query-type {
+  margin-bottom: 0;
+}
+
+.flex {
+    display: flex;
+    gap: 8px;
+}
+
 
