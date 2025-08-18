@@ -29,7 +29,7 @@ h1, p, ul {
 
 main {
 
-    width: 650px;
+    min-width: 650px;
     min-height: 400px;
    
     display: flex;
@@ -49,7 +49,7 @@ main {
     padding: 16px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 8px;
     padding: 48px;
     
     
@@ -59,7 +59,7 @@ main {
 }
 
 .content h1 {
-    font-size: 32px;
+    font-size: 46px;
     color: hsl(234, 29%, 20%);
     font-weight: 700;
    
@@ -82,7 +82,7 @@ main {
 .content ul{
     color: hsl(235, 18%, 26%);
     font-weight: 400;
-    line-height: 2;
+    line-height: 1.5;
    
     
 }
