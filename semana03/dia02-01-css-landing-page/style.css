@@ -3,8 +3,63 @@
  font-family: "Open Sans", sans-serif;
 */
 
+
+/* GENERAL /*
+
+
+/* HEDER SECTION */
+
+* { /* Reset all elements */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1rem = 14px */
+   font-size: 14px;
+}
+
 body {
-    background-color: bisque;
+    background-color: hsl(217, 28%, 15%);
+    color: hsl(0, 0%, 100%);
 
     font-family: "Open Sans", sans-serif;
+
+
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {     
+    /* TODO: RWD (Responsive Web Design) */
+    max-width: 100%;
+    height: auto;
+}
+/* UTILS*/
+
+.wrapper {
+    /* adaptando el ancho de nla pagina a dispositivos moviles y textos */
+    width: min(100% - 3rem, 1440px);
+  
+}
+/* HEADER SECTION */
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto; /* 0: top , bottom / Auto: left, right */
+    
+    margin-top: 3rem; /* 14px * 3 = 42px */
+}
+
+.header__nav {
+    display: flex;
+    gap: 1rem;
 }
