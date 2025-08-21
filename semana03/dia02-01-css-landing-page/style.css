@@ -79,6 +79,13 @@ img {
 
 }
 
+.hero__image {
+    width: min(100% - 3rem, 720px);
+   
+   
+}
+
+
 .hero__title {
 
     width: min(100% - 3rem, 720px);
@@ -90,7 +97,7 @@ img {
     text-align: center;
 }
 
-.hero__text{
+.hero__text {
     width: min(100% - 3rem, 720px);
 
     font-weight: 400;
@@ -113,4 +120,37 @@ img {
   background: linear-gradient(90deg,hsl(176, 68%, 64%) 0%, hsl(198, 60%, 50%) 100%);
 
 }
+
+/* FEATURE SECTION */
+.features {
+    display: grid;
+    grid-template-columns: 340px 340px;
+    justify-content: center;
+    align-content: center;
+    gap: 5rem;
+   
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;  
+}
+
+.feture__title {
+    font-family: "Raleway", sans-serif;
+
+}
+
+.feature__text {
+    
+    text-align: center;
+}
+
+
+   
+    
+
+   
     
