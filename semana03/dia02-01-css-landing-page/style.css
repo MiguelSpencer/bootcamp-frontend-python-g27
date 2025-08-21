@@ -63,3 +63,54 @@ img {
     display: flex;
     gap: 1rem;
 }
+
+/*HERO SECTION */
+
+.hero {
+   
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;  /* 14px. *. 2. =28px. =. 2rem */
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+}
+
+.hero__title {
+
+    width: min(100% - 3rem, 720px);
+
+    font-family:"Raleway", sans-serif;
+    font-size: 2.5rem; /* 14px * 2.5 = 35px */  
+    font-weight: 700;
+
+    text-align: center;
+}
+
+.hero__text{
+    width: min(100% - 3rem, 720px);
+
+    font-weight: 400;
+    font-size: 1.2rem; /* 14px * 1.2 = 16.8px */
+    text-align: center;
+
+}
+
+.hero__button {
+
+  font-weight: 700;
+
+  border: 0;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  min-width: 220px;
+  color: hsl(0, 0%, 100%);
+
+    /* https://cssgradient.io/ */
+  background: linear-gradient(90deg,hsl(176, 68%, 64%) 0%, hsl(198, 60%, 50%) 100%);
+
+}
+    
