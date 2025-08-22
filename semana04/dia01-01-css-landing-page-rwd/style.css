@@ -1,0 +1,317 @@
+/*
+ font-family: "Raleway", sans-serif;
+ font-family: "Open Sans", sans-serif;
+*/
+
+/*
+ 576px -> pantallas pequeñas (celulares)
+ 768px -> pantallas pequeñas (tablets y celulares)
+ 992px -> pantallas medianas (Desktop)
+ 1200px -> pantallas grandes (Desktops, TVs)
+*/
+
+
+/* GENERAL */
+
+
+
+* { /* Selector universal */
+  /* border: 1px solid red; */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* TODO: Usar el tamaño de fuente con tamaños relativos usando REMs */
+  font-size: 14px;
+}
+
+body {
+    background-color: hsl(217, 28%, 15%);
+    color: hsl(0, 0%, 100%);
+
+    font-family: "Open Sans", sans-serif;
+
+
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {     
+    /* TODO: RWD (Responsive Web Design) */
+    max-width: 100%;
+    height: auto;
+}
+/* UTILS*/
+
+.wrapper {
+    /* adaptando el ancho de nla pagina a dispositivos moviles y textos */
+    width: min(100% - 3rem, 1440px);
+  
+}
+/* HEADER SECTION */
+
+.header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto; /* 0: top , bottom / Auto: left, right */
+    
+    margin-top: 3rem; /* 14px * 3 = 42px */
+}
+
+.header__nav {
+    display: flex;
+    gap: 1rem;
+}
+
+/*HERO SECTION */
+
+.hero {
+   
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;  /* 14px. *. 2. =28px. =. 2rem */
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+}
+
+.hero__image {
+    width: min(100% - 3rem, 720px);
+   
+   
+}
+
+
+.hero__title {
+
+    width: min(100% - 3rem, 720px);
+
+    font-family:"Raleway", sans-serif;
+    font-size: 2.5rem; /* 14px * 2.5 = 35px */  
+    font-weight: 700;
+
+    text-align: center;
+}
+
+.hero__text {
+    width: min(100% - 3rem, 720px);
+
+    font-weight: 400;
+    font-size: 1.2rem; /* 14px * 1.2 = 16.8px */
+    text-align: center;
+
+}
+
+.hero__button {
+
+  font-weight: 700;
+
+  border: 0;
+  border-radius: 7rem;
+  padding: 1rem 1.5rem;
+  min-width: 220px;
+  color: hsl(0, 0%, 100%);
+
+    /* https://cssgradient.io/ */
+  background: linear-gradient(90deg,hsl(176, 68%, 64%) 0%, hsl(198, 60%, 50%) 100%);
+
+}
+
+/* FEATURE SECTION */
+
+.features {
+
+
+    display: grid;
+    grid-template-columns: 340px 340px;
+    justify-content: center;
+    align-content: center;
+    gap: 5rem;
+   
+}
+
+
+@media (min-width: 1200px) {
+    .features {
+        grid-template-columns: 340px 340px;
+    }
+
+}
+
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;  
+}
+
+.feture__title {
+    font-family: "Raleway", sans-serif;
+
+}
+
+.feature__text {
+    
+    text-align: center;
+}
+
+/*COLABORATION SECTION*/
+
+.collaboration {
+   
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+@media (min-width: 1200px) {
+    .collaboration {
+        flex-direction: row;
+       
+    }
+}
+        
+
+.how_works {
+   
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: min(100% - 3rem, 480px);
+  
+}
+
+.how_works__title {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.4rem; /* 14px * 1.5 = 21px */
+    font-weight: 700;
+    
+}
+
+@media (min-width: 1200px) {
+  .how_works__title {
+    font-size: 2.8rem;
+  }
+}
+
+.how_works__text {
+    
+    font-weight: 400;
+    font-size: 1.2rem; /* 14px * 1.2 = 16.8px */
+    text-align: center;
+}
+
+.how_works__button {
+    color: hsl(176, 68%, 64%);
+    
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    width: 10.8rem; 
+    border-bottom: 1px solid hsl(176, 68%, 64%);
+    padding-bottom: 0.5rem;
+    
+
+}
+
+ 
+/* TESTIMONIALS SECTION */
+
+.testimonials {
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto; /* 0: top , bottom / Auto: left, right */
+  
+}
+
+@media (min-width: 1200px) {
+    .testimonials {
+        flex-direction: row;
+    
+    }
+}
+
+.testimonial {
+   
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    background-color: hsl(219, 30%, 18%);
+    border-radius: 0.5rem;
+
+    width: min(100% - 3rem, 480px);
+
+    position: relative;
+}
+ 
+
+/* .testimonial:nth-child(2):before {} */
+/* .testimonial:first-child:before {} */
+/* .testimonial:last-child:after {} */
+
+
+.testimonial:first-child:before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 10px;
+  z-index: -1;
+
+  display: block;
+  width: 55px;
+  height: 45px;
+
+  background-image: url(images/bg-quotes.png);
+  background-repeat: no-repeat;  
+  background-size: contain;
+}
+
+
+.testimonial__text {
+    margin-bottom: 2rem;
+    font-size: 1.5rem; /* 14px * 1.5 = 21px */
+
+}
+
+
+.testimonial__profile {
+    display: flex;
+    gap: 1rem;
+
+    font-size: 0.9rem;;
+  
+}
+
+.testimonial__avatar {
+   
+    border-radius: 50%;
+}
+
+.testimonial__user h4 {
+   font-weight: 700;
+}
+
+.testimonial__user h5 {
+    font-weight: 400;;
+}

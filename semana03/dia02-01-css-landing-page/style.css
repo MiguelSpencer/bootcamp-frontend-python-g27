@@ -3,11 +3,16 @@
  font-family: "Open Sans", sans-serif;
 */
 
+/*
+ 576px -> pantallas pequeñas (celulares)
+ 768px -> pantallas pequeñas (tablets y celulares)
+ 992px -> pantallas medianas (Desktop)
+ 1200px -> pantallas grandes (Desktops, TVs)
+*/
 
 /* GENERAL /*
 
 
-/* HEDER SECTION */
 
 * { /* Reset all elements */
     margin: 0;
@@ -130,6 +135,15 @@ img {
     gap: 5rem;
    
 }
+
+
+@media (min-width: 1200px) {
+    .features {
+        grid-template-columns: 340px 340px;
+    }
+
+}
+
 
 .feature {
     display: flex;
