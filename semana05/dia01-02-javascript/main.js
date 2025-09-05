@@ -449,3 +449,195 @@ console.log(resultado)
 
 console.log(esMayorOMenorDeEdadConRetorno(25)) // Mayor de edad
 console.log(esMayorOMenorDeEdadConRetorno(12)) // Menor de edad
+
+// MÉTODOS DE CADENAS
+
+const welcome = ' Hola Javascript '
+
+console.log(welcome.length)
+console.log(welcome.toUpperCase())
+console.log(welcome.toLowerCase())
+console.log(welcome.trim()) // Remueve los espacios en blanco al inicio y al final de la cadena
+
+const avatar = 'Hola @me'
+
+console.log(avatar.concat('victorvzn')) // Hola @mevictorvzn
+console.log(avatar.replace('me', 'victorvzn')) // Hola @victorvzn
+console.log(avatar.slice(0, 5)) // Retorna una parte de la cadena tomando la posición/índice de inicio y final en los parámetros
+console.log(welcome.indexOf('script')) // 10
+
+
+// TIPOS DE DATOS NO PRIMITIVOS (ARRAYS, OBJECTS)
+
+// ARRAYS
+
+// Un arreglo tien elementos de cualquier tipo de dato: cadena, números, booleans, null, undefined, funciones, arrays, objetos, etc.
+
+const arregloVacio = []
+const arregloConNombres = ['Victor', 'Liliana', 'Marcial', 'Mariana']
+const listaConValores = [1, 2, 3, 'Victor', 'Villazón', true, null, undefined, [6, 7, 8]]
+
+const listaConFunciones = [() => (console.log('Hola fn()')), '123', 999]
+
+console.log(arregloVacio)
+console.log(arregloConNombres)
+console.log(listaConValores)
+console.log(listaConFunciones)
+
+// Lectura de los elementos de un arreglo
+
+console.log(listaConValores[0]) // 1
+console.log(listaConValores[4]) // Villazón
+console.log(listaConValores[5]) // true
+console.log(listaConValores[100]) // undefined
+console.log(listaConValores[8][1]) // 7
+
+listaConFunciones[0]() // Estamos ejecutando la función que está en el índice 0 del arreglo
+
+// ¿Cómo sabemos la longitud de un arreglo?
+
+console.log(arregloConNombres.length) // 4 elementos
+console.log(listaConValores.length) // 9 elementos
+
+//Escritura en arreglos
+
+listaConValores[0] = 'Fiorella'
+listaConValores[4] = 'Jimenez'
+
+console.log(listaConValores)
+
+// OPERACIONES SOBRE LOS ARREGLOS
+
+// Insertar nuevos elementos al final del arreglo
+
+arregloConNombres.push('Javascript')
+arregloConNombres.push('CSS')
+
+console.log(arregloConNombres)
+
+// Remover elementos del final del arreglo
+
+arregloConNombres.pop()
+
+console.log(arregloConNombres)
+
+// Insertar un elemento en una posición determinada
+
+const arr = [...arregloConNombres] // Copia o Clone del arregloConNombres
+
+console.log(arr)
+arr.splice(1, 0, 'HTML')
+console.log(arr)
+console.log(arregloConNombres) // Queda intacto
+
+// Eliminar un elemento
+
+console.log(arregloConNombres) // ['Victor', 'HTML', 'Liliana', 'Marcial', 'Mariana', 'Javascript']
+arregloConNombres.splice(2, 1)
+console.log(arregloConNombres) // ['Victor', 'Liliana', 'Mariana', 'Javascript']
+
+// Otras funciones: slice (Investiguen)
+
+// https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
+
+// Split y join para cadenas
+
+console.log('frutas'.split(''))
+console.log('frutas'.split('').join(','))
+
+
+// EJERCICIOS
+
+// EJERCICIO: Lista de Invitados
+
+// Tienen un arreglo con los nombres de las personas invitadas a una fiesta.
+
+// 01 - Declara el arreglo con 5 nombres.
+let invitados = ["Ana", "Luis", "María", "Pedro", "Carla"];
+
+// 02 - Muestra en consola todos los nombres.
+// 03 - Agrega un nuevo invitado al final de la lista.
+// 04 - Inserta un invitado al inicio de la lista.
+// 05 - Elimina al último invitado de la lista.
+// 06 - Elimina al primer invitado de la lista.
+// 07 - Muestra cuántos invitados hay actualmente.
+// 08 - Reemplaza el segundo invitado de la lista por otro nombre.
+
+
+// EJERCICIOS DE ALGORITMOS
+
+// 1. Encontrar el mayor número
+// Dado un arreglo de números, encuentra el número más grande sin usar Math.max.
+
+// 2. Contar pares e impares
+// Dado un arreglo de números, muestra cuántos son pares y cuántos son impares.
+
+// 3. Invertir un arreglo
+// Dado un arreglo, crea otro arreglo con los elementos en orden inverso sin usar .reverse().
+// 👉 Pista: usa un bucle desde el final hacia el inicio.
+
+// 4. Buscar un elemento
+// Pide un nombre y verifica si está en el arreglo de invitados.
+// Si está, muestra el índice donde se encuentra; si no, indica que no existe.
+
+// 5. Eliminar duplicados
+// Dado un arreglo con nombres repetidos, crea un nuevo arreglo sin duplicados.
+// 👉 Pista: usa un arreglo auxiliar y verifica antes de insertar.
+
+// 6. Palíndromo con arreglos
+// Verifica si una palabra es palíndroma (se lee igual al derecho y al revés).
+// 👉 Pista: conviértela en arreglo de letras y compárala con su inverso.
+
+// 7. Suma de todos los elementos
+// Dado un arreglo de números, calcula la suma total de sus elementos sin usar reduce.
+// 👉 Pista: acumula con un for.
+
+// 8. Número más repetido
+// Dado un arreglo de números, encuentra cuál aparece más veces.
+// 👉 Pista: usa un contador para cada número.
+
+// 9. Ordenar un arreglo (básico)
+// Ordena un arreglo de números de menor a mayor sin usar .sort().
+// 👉 Pista: algoritmo de burbuja (intercambiar elementos si están desordenados).
+
+// 10. Intercalar dos arreglos
+// Dado dos arreglos [1,2,3] y ['a','b','c'], crea uno nuevo: [1,'a',2,'b',3,'c'].
+// 👉 Pista: usa un for que recorra en paralelo.
+
+// TODO: Investiguen cada uno de los métodos de arreglos que muestro en la siguiente línea
+
+// MÉTODOS DE ARREGLOS (includes, map, filter, reduce, every, some, flat, flatMap, etc.)
+
+const languages = ['javascript', 'php', 'python', 'C', 'c++', 'java', 'python']
+
+// Método INCLUDES, verifica si existe cierto valor(tipo de dato) en un arreglo y devuelve un resultado booleano(true o false)
+
+console.log('INCLUDES', languages.includes('java')) // true
+console.log('INCLUDES', languages.includes('cobol')) // false
+console.log('INCLUDES', languages.includes('PYTHON')) // false
+
+// Método MAP, devuelve un arreglo y modifica cada elemento pasando una función(callback)
+// El map siempre devuelve un arreglo nuevo
+
+const nombresConAsterisco = languages.map(function(language) {
+  return language + '*'
+})
+
+console.log(languages) // Este arreglo no cambia
+
+console.log(nombresConAsterisco)
+
+// Método FILTER, nos ayuda a ubicar un elemento dentro de un arreglo usando una condición y devuelve un nuevo arreglo con los resultados
+
+const filteredLanguages = languages.filter(
+  function (language) {
+    // return false
+    // return language === 'java'
+    // return language === 'python'
+    // return language.includes('c')
+    return language.toLowerCase().includes('c')
+  }
+)
+
+console.log(filteredLanguages)
+console.log(languages)
