@@ -641,3 +641,164 @@ const filteredLanguages = languages.filter(
 
 console.log(filteredLanguages)
 console.log(languages)
+
+
+
+// EJERCICIO: Análisis de compras
+// Tienes un arreglo con los nombres de productos que un cliente compró en una tienda:
+
+const compras = [
+  "manzana",
+  "pan",
+  "leche",
+  "manzana",
+  "queso",
+  "huevo",
+  "pan",
+  "jugo",
+  "manzana"
+];
+
+// Resuelve lo siguiente:
+
+// includes: Verifica si el cliente compró "queso".
+
+console.log('INCLUDES', compras.includes('queso'))
+console.log()
+
+
+// filter: Crea un nuevo arreglo que contenga solo las manzanas que se compraron.
+
+console.log()
+// reduce: Cuenta cuántos productos en total compró el cliente.
+console.log()
+
+
+
+// Método REDUCE, nos ayuda a tomar los valores de un arreglo y sumarlos
+
+const numeros = [3, 40, 100, 7, 50]
+
+let acumulador = 0
+
+for (let i=0; i < numeros.length; i++) {
+  acumulador = acumulador + numeros[i]
+}
+
+console.log(acumulador)
+
+// Vamos a usar reduce
+
+const sumatoria = numeros.reduce(
+  function(acumulador, valorActual) {
+    return acumulador + valorActual
+  },
+  0
+)
+
+console.log(sumatoria)
+
+// Método SORT y TOSORTED, nos ayuda a ordenar un arreglo de elementos.
+// ⚠ Muta el arreglo original. Ordena cadenas de texto.
+
+// [...languages]: esta sintaxis copia el arreglo original en un nuevo arreglo
+
+const copiaDeLanguages = [...languages]
+const ordenandoLanguages = copiaDeLanguages.sort()
+
+const ordenandoLanguagesMejorado = languages.toSorted()
+
+console.log(ordenandoLanguages)
+console.log(ordenandoLanguagesMejorado)
+console.log(languages)
+
+const edades = [25, 12, 10, 89, 32, 81, 3]
+
+const ordenandoEdadesAsc = [...edades].sort(function(a, b) {
+  // Si el resultado es negativo -> a va antes que b
+  // Si el resultado es positivo -> b va antes que a
+  // Si es 0 -> son iguales
+  return a - b
+})
+
+const ordenandoEdadesDesc = [...edades].sort(function(a, b) {
+  return b - a
+})
+
+console.log(ordenandoEdadesAsc)
+console.log(ordenandoEdadesDesc)
+
+// Método FOREACH, nos ayuda a recorrer un arreglo sin tener ningún retorno de datos
+
+const miArreglo = []
+
+languages.forEach(
+  function(language, index) {
+    if (index > 3) {
+      miArreglo.push('hola--' + language)
+    }
+  }
+)
+
+console.log(miArreglo)
+
+// OBJETOS
+
+/*
+  {
+    KEY: VALUE,
+    KEY2: VALUE2,
+    KEY3: VALUE3
+  }
+*/
+
+const miObjetoVacio = {}
+
+const miObjeto = {
+  nombre: 'Victor',
+  apellido: 'Villazón',
+  colorFavorito: 'azúl',
+  edad: 37,
+  esMayorDeEdad: true,
+  coloresFavoritos: ['rosado', 'rojo', 'azúl'],
+  'mi edad': 39,
+  cursos: [
+    {
+      nombre: 'Matemática',
+      nota: 18
+    },
+    {
+      nombre: 'Algoritmos',
+      nota: 13
+    }
+  ],
+  devolverCursosAprobados: function() {
+    return this.cursos.filter(function(curso) {
+      return curso.nota > 13
+    })
+  }
+}
+
+console.log(miObjetoVacio)
+console.log(miObjeto)
+
+// LEER LOS CAMPOS DE UN OBJETO (notación de punto y de corchete)
+
+console.log(miObjeto.nombre) // Victor
+console.log(miObjeto.apellido) // Villazón
+console.log(miObjeto.edad) // 37
+
+// console.log(miObjeto.mi edad) // BAD ❌ - Uncaught SyntaxError: missing ) after argument list
+console.log(miObjeto['mi edad']) // OK ✅
+
+console.log(miObjeto.coloresFavoritos) // ['rosado', 'rojo', 'azúl']
+console.log(miObjeto.coloresFavoritos[2]) // azúl
+
+console.log(miObjeto.cursos)
+console.log(miObjeto.cursos[1])
+console.log(miObjeto.cursos[1].nombre)
+console.log(miObjeto.cursos[1].nota)  // 13 con la notación de punto
+console.log(miObjeto.cursos[1]['nota']) // 13 con la notación de corchete
+
+console.log(miObjeto.devolverCursosAprobados)
+console.log(miObjeto.devolverCursosAprobados())
