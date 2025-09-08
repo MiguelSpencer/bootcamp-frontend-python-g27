@@ -17,9 +17,18 @@
   </main>
 
   <script>
-    const key = document.getElementById("keycode");
+    const key = document.getElementById("keycode")
+    const character = document.getElementById("#character")
 
-    
-    
-  </script>
+    document.addEventListener("keydown", function(event)  {
+      console.log(event.keycode)
+      console.log(event.key)
+
+      key.textContent = event.keycode
+      character.textContent = event.key
+    })
+
+   </script>
+</body>
+</html>
   
