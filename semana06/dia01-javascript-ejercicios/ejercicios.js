@@ -91,8 +91,17 @@ function esPalindromo(texto = '') {
 // elementosEnComun([true], [true, false]) → [true]
 
 function elementosEnComun(arr1 = [], arr2 = []) {
-  return [];
+  const resultado = []
+  for (let i = 0; i < arr1.length; i++) {
+    const elemento = arr1[i]
+
+    if (arr2.includes(elemento) && !resultado.includes(elemento)){
+      resultado.push(elemento)
+    } 
 }
+  return resultado; 
+}
+elementosEnComun([1,2,3], [2,3,4]) 
 
 
 // Ejercicio 8: Mayor número
