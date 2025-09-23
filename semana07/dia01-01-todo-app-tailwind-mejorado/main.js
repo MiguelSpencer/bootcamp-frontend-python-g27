@@ -153,6 +153,6 @@ taskButtonClear.addEventListener('click', (event) => {
   renderTasks(tasks)
 
   saveTasksInLocalStorage(tasks)
-  })
+})
 
 renderTasks(tasks)
