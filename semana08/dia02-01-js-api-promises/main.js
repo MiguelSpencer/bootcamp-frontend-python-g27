@@ -26,3 +26,61 @@ fetch('https://jsonplaceholder.typicode.com/posts')
        console.log(data[0].title)
   })
 
+// STATUS CODE: 
+// * 200 OK
+// * 201 Created
+// * 204 No Content
+// * 400 Bad Request
+// * 401 Unauthorized
+// * 403 Forbidden
+// * 404 Not Found
+// * 500 Internal Server Error
+
+// DONE: Renderizar todos los posts en la página mostrando su id, title y body
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json())
+  .then(posts => {
+    const divApp = document.querySelector('#app')
+
+    let postsList = ''
+
+    posts.forEach(post => {
+      postsList += `
+        <article>
+          <h3>${post.id} - ${post.title}</h3>
+          <p>${post.body}</p>
+        </article>
+      `
+    });
+
+    console.log(postsList)
+
+    divApp.innerHTML = postsList
+  })
+
+// TODO: Renderizar todos los users en la página mostrando su id, name y company name
+// https://jsonplaceholder.typicode.com/users
+
+function renderUsers(users) {
+  const divUsers = document.querySelector('#users')
+
+  let usersList = ''
+
+  users.forEach(user => {
+    usersList += `
+      <article>
+        <h3>${user.id} - ${user.name}</h3>
+        <p>${user.company.name}</p>
+      </article>
+    `
+  })
+  
+  divUsers.innerHTML = usersList
+}
+
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(users => {
+    renderUsers(users)
+  })
